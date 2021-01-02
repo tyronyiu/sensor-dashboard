@@ -65,34 +65,54 @@ function Graph(){
           data={state}
           options={{
               responsive: true,
-		maintainAspectRatio: false,
-            title:{
-              display:true,
-              text:'Temperature over time',
-              fontSize:20
-            },
-            legend:{
-              display:true,
-              position:'bottom'
-            }
+                  maintainAspectRatio: false,
+                  title:{
+                      display:true,
+                          text:'Temperature over time',
+                          fontSize:20
+                  },
+                  legend:{
+                      display:true,
+                          position:'bottom'
+                  }
           }}
+                  tooltips: {
+                      bodySpacing: 4,
+                          mode:"nearest",
+                          intersect: 0,
+                          position:"nearest",
+                          xPadding:10,
+                          yPadding:10,
+                          caretPadding:10
+                  }
+
         />
 
           <Line
-          data={humidity}
-          options={{
-              responsive: true,
-		maintainAspectRatio: false,
-            title:{
-              display:true,
-              text:'Humidity over time',
-              fontSize:20
+            data={humidity}
+            options={{
+                responsive: true,
+                    maintainAspectRatio: false,
+                    title:{
+                        display:true,
+                            text:'Humidity over time',
+                            fontSize:20
+                    },
+                    legend:{
+                        display:true,
+                            position:'bottom'
+                    }
+            }}
+            tooltips: {
+                bodySpacing: 4,
+                    mode:"nearest",
+                    intersect: 0,
+                    position:"nearest",
+                    xPadding:10,
+                    yPadding:10,
+                    caretPadding:10
             },
-            legend:{
-              display:true,
-              position:'bottom'
-            }
-          }}
+
         />
             </>
         )
